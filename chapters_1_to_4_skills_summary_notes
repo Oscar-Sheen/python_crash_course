@@ -1,0 +1,67 @@
+#Sort method.
+dinner = ['trump', 'melania', 'derek', 'tiffany']
+print(dinner)
+dinner.sort()
+print(dinner)
+#Pop method.
+popped_derek = 'derek'
+dinner.pop(0)
+print(dinner)
+print(popped_derek.title())
+#Insert method.
+dinner.insert(2, popped_derek)
+dinner.sort()
+print(dinner)
+#Remove method.
+dinner.remove('trump')
+print(dinner)
+#Append method.
+dinner.append('oscar james sheen the greatest of all time')
+print(dinner)
+#The Length function.
+print(len(dinner))
+#The Sorted function.
+print(sorted(dinner))
+#The Delete  statement.
+del dinner[0]
+print(dinner)
+#Change assignement statement.
+dinner[1] = 'shirley margaret gresham'
+dinner.sort()
+print(dinner)
+#For loops, lists, slices, looping slices, copying and a tupple.
+for five in range(1, 6):
+	print(five)
+
+six = list(range(1, 7))
+print(six)
+
+magicians = ['david', 'melania', 'sorcerer x', 'wizard of oz']
+for magician in magicians:
+	print(magician.title())
+
+print(magicians)
+print(magicians[0:2])
+print(magicians[:3])
+print(magicians[3:])
+
+print(magicians)
+for magician in magicians[0:2]:
+	print(magician.title())
+
+my_movie = magicians[:]
+my_movie.append('orc warkgununun')
+print(my_movie)
+print(sorted(my_movie))
+
+squared_list = []
+for square in range(1, 11):
+	value = square ** 2
+	squared_list.append(value)
+print(squared_list)
+
+squared_list = [value ** 2 for value in range(1, 11)]
+print(squared_list)
+
+rulertupple = ('four', 'two', 'seven', 'eight', 'one', 'three')
+print(rulertupple)
