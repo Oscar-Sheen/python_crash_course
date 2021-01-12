@@ -1,0 +1,295 @@
+#2.1. Simple Message
+x = "This is a simple message."
+print(x)
+#2.2. Simple Messages
+y = "This is another message."
+print(y, '\n')
+#2.3. Personal Message
+name = "Mark"
+print(f"Hello {name}, would you like to learn some Python today?")
+#2.4. Name Cases
+print(name.upper())
+print(name.lower())
+print(name.title())
+#2.5. Famous Quote
+quote_1 = ("Neil Armstrong said \"That's one small step for a man, one giant ") 
+quote_2 = ("leap for mankind.\" After having set down his foot on our moon.")
+print(quote_1 + quote_2)
+#2.6. Famous Quote 2
+quote = "That's one small step for a man, one giant leap for mankind."
+attribute = "neil armstrong"
+print(f"{attribute.title()} said \"{quote}\" After having set down his foot on our moon.")
+#2.7. Stripping Names
+name = '\tceasur \n'
+print(name.rstrip()), print(name.lstrip()), print(name.strip().title())
+#2.8. Number Eight
+print(1 + 7)
+print(9 - 1)
+print(int(16 / 2))
+print(2 * 4)
+#2.9. Favorite Number
+fav_number = 5
+print(f"I hereby reveal my favourite number. It's the number {fav_number}!")
+#2.10. Adding Comments
+#Python uses the # symbol followed by my comment, in order for me to comment.
+print('\n')
+#3.1. Names
+names = ['raymond', 'melcome', 'eileen']
+print(f"{names[0].title()}, {names[1].title()} and {names[2].title()}.")
+for name in names:
+	print(name.title())
+#3.2. Greetings
+print(f"{names[1].title()} and {names[2].title()} are parents to {names[0].title()}.")
+#3.3. Your own list
+motorcycles = ['honda', 'yamaha', 'kawasaki', 'ducati', 'bmw']
+print(f"The {motorcycles[2].title()} motorcycle came first in the race.")
+#3.4. Guest list
+dinner_invites = ['gumby', 'snuffulufucus', 'big bird', 'cookie monster']
+for invites in dinner_invites:
+	print(f"Hi {invites.title()}, you're invited to dinner tonight.")
+#3.5. Changing Guest List
+print(f"Oh no, {dinner_invites[2].title()} can't make it.")
+dinner_invites.append('count von count')
+for invites in dinner_invites:
+	print(f"Hi {invites.title()}, you're all invited to dinner.")
+#3.6. More Guests
+print("Attention all guests, I've found a bigger dinner table.")
+dinner_invites.insert(0, 'oscar')
+dinner_invites.insert(3, 'grover')
+dinner_invites.append('gabby')
+dinner_invites.sort()
+print(dinner_invites)
+for invites in dinner_invites:
+	print(f"Hi {invites.title()}, you're still invited to our dinner on the 24th.")
+#3.7. Shrinking Guest List
+print("Now I can only invite 2 people to dinner.")
+pop_big_bird = dinner_invites.pop(0)
+print(f"Sorry, {pop_big_bird.title()} but dinner for you is off.")
+pop_cookie_monster = dinner_invites.pop(0)
+print(f"Sorry, {pop_cookie_monster.title()} but dinner for you is off.")
+pop_count_von_count = dinner_invites.pop(0)
+print(f"Sorry, {pop_count_von_count.title()} but dinner for you is off.")
+pop_gabby = dinner_invites.pop(0)
+print(f"Sorry, {pop_gabby.title()} but dinner for you is off.")
+pop_grover = dinner_invites.pop(0)
+print(f"Sorry, {pop_grover.title()} but dinner for you is off.")
+pop_gumby = dinner_invites.pop(0)
+print(f"Sorry, {pop_gumby.title()} but dinner for you is off.")
+print(dinner_invites)
+print(f"{dinner_invites[0].title()}, you are still invited to dinner.")
+print(f"{dinner_invites[1].title()}, you are still invited to dinner.")
+del dinner_invites[0:2]
+print(dinner_invites, '\n')
+#3.8. Seeing the world.
+places = ['japan', 'singapore', 'spain', 'italy', 'usa']
+print(places)
+print(sorted(places))
+print(places)
+print(sorted(places, reverse = True))
+print(places)
+places.reverse()
+print(places)
+places.sort()
+print(places)
+places.reverse()
+print(places)
+#3.9. Dinner Guests
+dinner_invites = ['gumby', 'snuffulufucus', 'big bird', 'cookie monster']
+print(f"I'll be inviting {len(dinner_invites)} Sesame Streeters to dinner.")
+#3.10. Every Function
+mountains = ['annapurna', 'cho oyu', 'shishapangma', 'ben nevis', 'wellington']
+print(len(mountains))
+print(sorted(mountains))
+del mountains[-1]
+print(sorted(mountains))
+print('\n')
+#4.1. Pizzas
+pizzas = ['bbq', 'supreme', 'pepparoni', 'italian sausage']
+for pizza in pizzas:
+	print(f"I like {pizza} pizza.")
+print("I like pizza more than sausage rolls.")
+print("I like pizza more than I would if I had to eat a book.")
+#4.2. Animals
+animals = ['cat', 'pig', 'dog', 'horse', 'donkey']
+for animal in animals:
+	print(f"A {animal} would make a great pet.")
+print("The above animals all have four legs.")
+#4.3. Counting to Twenty
+for value in range(1, 21):
+	print(value)
+#4.4. One Thousand
+value = list(range(1, 1001))
+print(value)
+#4.5. Summing a Million
+print(min(value))
+print(max(value))
+print(sum(value))
+#4.6. Odd Numbers
+odd_numbers = list(range(1, 21, 3))
+print(odd_numbers)
+more_odd_numbers = []
+for odd_number in more_odd_numbers:
+	value = range(1, 21, 3)
+	odd_number.append(value)
+	print(odd_number)
+#4.7. Threes
+threes = []
+for three in range(1, 11):
+	value = three * 3
+	threes.append(value)
+print(threes)
+# alternatively ...
+threes = list(range(3, 31, 3))
+for number in threes:
+	print(number)
+#4.8 & 4.9. Cubes
+cubes = [cube ** 3 for cube in range(1, 11)]
+print(cubes)
+#4.10. Slices
+print(f"The first three items in the list are {cubes[0:3]}.")
+print(f"Three items from the middle of the list are {cubes[4:7]}.")
+print(f"The last three items in the list are {cubes[-3:]}.")
+#4.11. My Pizzas, Your Pizzas
+pizzas = ['bbq', 'supreme', 'pepparoni', 'italian sausage']
+friend_pizzas = (pizzas[:])
+pizzas.append('mexican hot chilli')
+friend_pizzas.append('seafood oyster')
+print(f"My favourite pizzas are {pizzas[0:-1]} and {pizzas[-1]} pizzas.")
+print(f"My friends favourite pizzas are {friend_pizzas[0:-1]} and {friend_pizzas[-1]} pizzas.")
+#the problem is the [] brackets appear. To print it without [], one way is ...
+print("My favourite pizzas are:")
+for pizza in pizzas:
+	print(f"{pizza}")
+print("\nMy friends favourite pizzas are:")
+for pizzas in friend_pizzas:
+	print(f"{pizzas}")
+#4.12 More Loops
+food_list = ['strawberries', 'milk', 'cream', 'cheese', 'pasta']
+print("From the shops I need to buy:")
+for food in food_list:
+	print(food.upper())
+#4.13. Buffet
+buffet_foods = ('curry chicken', 'curry beef', 'vegetable curry', 'potato curry', 'nesa bread')
+for foods in buffet_foods:
+	print(foods)
+revised_buffet_foods = ('creamy potato', 'cheesy brocceli','vegetable curry', 'potato curry', 'nesa bread')
+for foods in revised_buffet_foods:
+	print(foods)
+print('\n')
+#5.1. Conditoinal tests
+	# test 1
+car = 'Audi'
+print("Is the car an Audi? I predict True.")
+print(car.lower() == 'audi' or car == 'Audi', '\n')
+	# test 2
+print("Is the car not a Mercedes? I predict True.")
+print(car.lower() != 'mercedes' or car.title() != 'Mercedes')
+print("The car is an Audi not a Mercedes", '\n')
+	# test 3, 4 and 5
+x = 2
+y = 4
+print("Is x greater than 1? I predict True.")
+print(x > 1)
+print("Is y greater than 1? I predict True.")
+print(y > 1)
+print("Are x and y both less than 10> I predict True.")
+print(x < 10 and y < 10, '\n')
+	# test 6, 7 onwards.
+k = ['constant', 10.5]
+print("Does the variable 'k' have 'changing' as its only element? I predict False.")
+print(f"{k == ['changing', 10.5]} because it also has 10.5 as an element.")
+print("Does the variable 'k' have an element called 'constant'? I predict True.")
+print(k == ['constant', 10.5])
+print("Is the constant (k) < 10.5? I predict False.")
+print(k[1] < 10.5)
+print("Does k contain an element named 'changing'? I predict True.")
+print('constant' in k)
+print("Does k contain a 10.5?")
+print(10.5 in k)
+#5.2. More Conditional Tests
+#Test for equality and inequality with strings
+animal_1 = 'pig'
+animal_2_list = ['rhino', 'monkey', 'Stingray']
+print(f"Does animal_1 equal a pig? {animal_1 == 'pig'}, yes it does!")
+print(f"Does animal_2_list contain a monkey? {'monkey' in animal_2_list}, yes!")
+print(f"A gorilla isn't in animal_2_list, right? {'gorilla' not in animal_2_list}, there is no gorilla.")
+print(animal_2_list[2].lower() == 'stingray')
+age = 21
+print(age <= 21 and age > 18)
+print(age < 18 or age >= 21)
+#5.3. Alien Colors #1
+alien_color = 'green'
+if alien_color == 'green':
+	print("You just earned 5 points.")
+if alien_color == 'pink':
+	print("You just earned 5 points.")
+#5.4. Alien Colors #2
+if alien_color == 'green':
+	print("You just earned 5 points for shooting a green alien.")
+elif alien_color != 'green':
+	print("You just earned 10 points for shooting a non-green alien.")
+#5.5. Alien colors #3
+alien_color = 'yellow'
+if alien_color == 'green':
+	print("You just earned 5 points.")
+elif alien_color == 'yellow':
+	print("You just earned 10 points.")
+else:
+	print("You just earned 15 points.")
+#5.6. Stages of Life
+age = 50
+if age < 2:
+	print("The person is a baby.")
+elif age > 2 and age < 4:
+	print("The person is a toddler.")
+elif age > 4 and age < 13:
+	print("The person is a kid.")
+elif age > 13 and age < 20:
+	print("The person is a teenager.")
+elif age > 20 and age < 65:
+	print("The person is an adult.")
+elif age > 65:
+	print("The person is an elder.")
+#5.7. Favorite Fruit
+favorite_fruits = ['apple', 'avocados', 'banana', 'peach']
+if 'apple' in favorite_fruits:
+	print("I really like apples.")
+if 'avocados' in favorite_fruits:
+	print("I really like avocados.")
+if 'banana' in favorite_fruits:
+	print("I really like bananas.")
+if 'peach' in favorite_fruits:
+	print("I really like peaches.")
+#5.8. Hello Admin & 5.9. No Users
+user_names = ['admin', 'boogie_56', 'tom.tank', 'rebecca smith', 'jibb89']
+if user_names == []:
+	print("We need to find some more users.")
+for user in user_names:
+	if 'admin' == user:
+		print("Hello admin, would you like to see a status report?")
+	else:
+		print(f"Hello {user}, thank you for logging in again.")
+#5.10. Checking Usernames
+current_users = ['admin', 'Bob Ruth', 'Jessica Thomson', 'louise montgomery', 'michelle yeori']
+new_users = ['admin', 'luke walker', 'paul colabro', 'JESSICA THOMSON', 'michelle yeori', 'Lorena Sullivan']
+#step 1 is convert current users to lower case. To do this I've made a new list variable.
+copy_current_users = []
+for users in current_users:
+	copy_current_users.append(users.lower())
+print(copy_current_users)
+for user in new_users:
+	if user.lower() in copy_current_users:
+		print(f"{user} is already in use. Try another name.")
+	else:
+		print(f"{user} is available.")
+#5.11. Ordinal Numbers
+nine = list(range(1, 10))
+for number in nine:
+	if number == 1:
+		print("1st")
+	elif number == 2:
+		print("2nd")
+	elif number == 3:
+		print("3rd")
+	else:
+		print(f"{number}th")
