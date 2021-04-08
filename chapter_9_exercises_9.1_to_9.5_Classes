@@ -1,0 +1,149 @@
+#9.1. Restaurant:
+class Restaurant:
+	"""A class representing a restaurant"""
+	def __init__(self, restaurant_name, cuisine_type):
+		self.restaurant = restaurant_name
+		self.cuisine = cuisine_type
+
+	def describe_restaurant(self):
+		print(f"{self.restaurant} serves {self.cuisine}.")
+
+	def open_restaurant(self):
+		print(f"{self.restaurant} is open.")
+#make an instance
+restaurant = Restaurant("Oliver's Pizza", "Pizza")
+#print attributes
+print(f"{restaurant.restaurant}")
+print(f"{restaurant.cuisine}\n")
+
+restaurant.describe_restaurant()
+restaurant.open_restaurant()
+
+
+#9.2. Three restaurants:
+print('\n')
+instance_1 = Restaurant("Bob's Crab", "seafood")
+instance_2 = Restaurant("Sandy Bay Italian 1965", "italian")
+instance_3 = Restaurant("McDonalds", "fast food")
+
+instance_1.describe_restaurant()
+instance_2.describe_restaurant()
+instance_3.describe_restaurant()
+
+
+#9.3. Users
+print('\n')
+
+class User: #making a class ...
+	"""modelling ?"""
+	def __init__(self, first_name, last_name, email, phone_no): 
+		self.first_name = first_name #created attributes
+		self.last_name = last_name
+		self.email = email
+		self.phone_no = phone_no # ... finished making the class.
+
+	def describe_user(self): #making a method that prints ...
+		print("A summary of this user's information:")
+		print(f"Fist name: {self.first_name}")
+		print(f"Last name: {self.last_name}")
+		print(f"Email: {self.email}")
+		print(f"Phone: {self.phone_no}\n")#...finished making this method.
+
+	def greet_user(self): #making a method that prints a personalised message.
+		print(f"Good evening {self.first_name} {self.last_name}.\n")
+#creating several instances representing different users 
+user_1 = User('Oscar', 'Sheen', 'o@piglet.com', '9435 6731')
+#below I've created a new variable called user_2. It runs the User class and calls its __init__ method (which inherits certain attributes).
+user_2 = User('Adi', 'Toto', 'adi@piglet.com', '9455 0825')
+
+user_1.describe_user() #here I am calling the describe user method, after having attached the method to the instance user_1 using a dot.
+user_2.describe_user() #it'll print because the describe user method consists of print functions.
+
+user_1.greet_user() #again, I'm calling the greet_user method and attaching the instance user_1 with a dot.
+user_2.greet_user()
+
+
+#9-4. Number Served:
+class Restaurant:
+	"""A class representing a restaurant"""
+	def __init__(self, restaurant_name, cuisine_type, number_served):
+		self.restaurant = restaurant_name
+		self.cuisine = cuisine_type
+		self.number_served = 0
+
+	def describe_restaurant(self):
+		print(f"{self.restaurant} serves {self.cuisine}.")
+
+	def open_restaurant(self):
+		print(f"{self.restaurant} is open.")
+
+	def set_number_served(self, number_served):
+		"""Allow user to set the number of customers that have been served."""
+		self.number_served = number_served
+
+	def increment_number_served(self, number_served):
+		self.number_served += number_served
+
+#make an instance
+restaurant = Restaurant("Oliver's Pizza", "Pizza", "number_served")
+#print attributes
+print(f"{restaurant.restaurant} served {restaurant.number_served} {restaurant.cuisine}s.")
+#change the number served value and print it again.
+restaurant.number_served = 10
+print(f"{restaurant.restaurant} served {restaurant.number_served} {restaurant.cuisine}s.")
+#Add a method called set_number_served() that lets reset the number of customers served.
+restaurant.set_number_served(23)
+print(f"{restaurant.restaurant} served {restaurant.number_served} {restaurant.cuisine}s.")
+#Add a method called increment_number_served. Call it.
+restaurant.increment_number_served(30)
+print(f"{restaurant.restaurant} served {restaurant.number_served} {restaurant.cuisine}s.")
+
+
+#9-5. Login Attempts.
+class User:
+	"""modelling ?"""
+	def __init__(self, first_name, last_name, email, phone_no):
+		self.first_name = first_name
+		self.last_name = last_name
+		self.email = email
+		self.phone_no = phone_no
+		self.login_attempts = 1 #adding an attribute to the User class.
+		#The benefit of not including an attribute in the __init__ parameters, is
+		#I don't have to include it in the Instance Parameters.
+	def describe_user(self):
+		print("A summary of this user's information:")
+		print(f"Fist name: {self.first_name}")
+		print(f"Last name: {self.last_name}")
+		print(f"Email: {self.email}")
+		print(f"Phone: {self.phone_no}\n")
+
+	def greet_user(self):
+		print(f"Good evening {self.first_name} {self.last_name}")
+
+	def increment_login_attempts(self): #writing a method called increment_login_attempts
+		"""Increment the value of login_attempts"""
+		self.login_attempts += 1
+
+	def reset_login_attempts(self): #writing another method called reset_login_attempts.
+		"""Reset login attempts to 0."""
+		self.login_attempts = 0
+#creating several instances representing different users. An instance must have all __init__ parameters filled in for it to be called later.
+user_1 = User('Oscar', 'Sheen', 'o@piglet.com', '9435 6731')
+#below I've created a new variable called user_2. It runs the User class and calls its __init__ method (which inherits certain attributes).
+user_2 = User('Adi', 'Toto', 'adi@piglet.com', '9455 0825')
+
+user_1.describe_user()#here I am calling the describe_user method, after having attached the method to the instance user_1 using a dot.
+#callling methods only works after I've created instances e.g. user_1 = User.
+user_2.describe_user()#it'll print because the describe user method consists of print functions.
+
+print(f"User_1's login attempts : {user_1.login_attempts}") #here I'm printing my login_attempts call
+user_1.increment_login_attempts() #here I'm calling the increment_login_attempts method which only works because I've already created an instance for user_1. No instance would
+#mean there's nothing for the method to attach itself too. Also it starts with 1 (from line 24) and adds 1 (from line 24 also).
+print(f"User_1's login attempts : {user_1.login_attempts}") #printing all of user_1's login attempts.
+user_1.increment_login_attempts()
+user_1.increment_login_attempts()
+user_1.increment_login_attempts()
+print(f"User_1's login attempts : {user_1.login_attempts}") #printing all of user_1's login attempts.
+
+user_1.reset_login_attempts()
+print(f"Resetting user_1's login attempts : {user_1.login_attempts}")
